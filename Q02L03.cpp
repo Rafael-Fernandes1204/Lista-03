@@ -10,23 +10,26 @@ int main(){
         cin >> numCart;
         cout << "Informe o número de multas: ";
         cin >> numMult;
+        
         for(cont=1; cont<=numMult; cont++){
             cout << "Informe o valor da sua multa: ";
             cin >> valorMult;
             valorDiv+= valorMult;
-                if(maiorMult<valorMult){
+
+            if(maiorMult<valorMult){
                 maiorMult = valorMult;
-                }
-                if(maiorNumMult<numMult){
+            }
+            if(maiorNumMult<numMult){
                 maiorNumMult = numMult;
                 cartMaior = numCart;
-                }
+            }
             totalMult+= valorMult; 
         }
         cout << "Deseja cadastrar outro motorista? S- sim, N- não   ";
         cin >> fim;
         system("cls");
     }while(fim == 'S'|| fim == 's');
+
     cout << "O motorista com o maior número de multas foi: " << cartMaior << " seu número de multas foi de: "
      << maiorNumMult << "\nA maior multa foi de: " << maiorMult;
     cout << "\nO valor total arrecadado foi de R$: " << totalMult;
